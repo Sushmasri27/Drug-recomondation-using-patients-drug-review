@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insights - Medical Reviews</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .dashboard {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        .total-reviews {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #4a5568;
+        }
+
+        .chart {
+            margin-bottom: 40px;
+        }
+
+        .chart img {
+            max-width: 100%;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Insights Dashboard</h1>
+            <p class="total-reviews">Total Reviews Analyzed: <strong>{{ total_reviews }}</strong></p>
+        </header>
+
+        <nav>
+            <a href="/">🏠 Home</a>
+            <a href="/insights">📈 Insights</a>
+        </nav>
+
+        <div class="dashboard">
+            <div class="chart">
+                <h2>Top 10 Conditions</h2>
+                <img src="/static/top_conditions.png" alt="Top 10 Conditions">
+            </div>
+
+            <div class="chart">
+                <h2>Ratings Distribution</h2>
+                <img src="/static/ratings_distribution.png" alt="Ratings Distribution">
+            </div>
+
+            <div class="chart">
+                <h2>UsefulCount Distribution (Clipped at 50)</h2>
+                <img src="/static/usefulcount_distribution.png" alt="UsefulCount Distribution">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
